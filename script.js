@@ -75,13 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // Display greeting on home.html
-    const greeting=document.getElementById("greeting");
-    const currentUser=JSON.parse(localStorage.getItem("currentUser"));
-    if(currentUser && greeting){
-        greeting.textContent=`Hello, ${currentUser.fullname}!`;
-    }
-});
+    //img slide
 
 const images = document.querySelector('.images');
 if (images) {
@@ -104,8 +98,6 @@ prevBtn.addEventListener('click', () => {
   index = (index - 1 + totalImages) % totalImages;
   showImage();
 });
-
-// Optional: auto-slide every 5 seconds
 setInterval(() => {
   nextBtn.click();
 }, 5000);
@@ -118,3 +110,4 @@ const logout=document.getElementById("logout");
     window.location.href="index.html";
   });
  };
+});
